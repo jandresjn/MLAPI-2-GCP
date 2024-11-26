@@ -1,0 +1,12 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: servicio-dep-23-kaic-datapath
+spec:
+  template:
+    spec:
+      containers:
+        - image: us-central1-docker.pkg.dev/project-dep23/repo-dep-prediccion-datapath/image-v11-dep-prediccion-datapath:latest
+          env:
+          ports:
+            - containerPort: 4001
